@@ -25,7 +25,7 @@ import '../tabs_for_tabpar/schedule/schedule.dart';
 import '../tabs_for_tabpar/note/note.dart';
 
 class HomeScrean extends StatefulWidget {
-  const HomeScrean({Key? key}) : super(key: key);
+  const HomeScrean({super.key});
 
   @override
   _HomeScrean createState() => _HomeScrean();
@@ -68,22 +68,28 @@ class _HomeScrean extends State<HomeScrean>
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
-              colors: [Color(0xff3A3372), Color(0xff3A3372)])),
+              colors: [
+            Color(0xff2A2A2E),
+            Color(0xff1F1338),
+            Color(0xff0D0817),
+            Color(0xff050309),
+            Color(0xff000000),
+          ])),
       child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             backgroundColor: Colors.transparent,
-            title: Text(
+            title: const Text(
               "on.time",
               style: TextStyle(
                 color: Colors.white,
               ),
             ),
-            actions: [
+            actions: const [
               Icon(
                 Icons.notifications,
                 color: Colors.white,
@@ -96,34 +102,34 @@ class _HomeScrean extends State<HomeScrean>
           ),
           body: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 color: Colors.transparent,
                 height: MediaQuery.of(context).size.height,
                 child: Column(
                   children: [
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     Container(
                       // height: 50,
                       width: MediaQuery.of(context).size.height,
                       decoration: BoxDecoration(
-                          color: Color(0xff3C1F7B),
+                          color: const Color(0xff3C1F7B),
                           borderRadius: BorderRadius.circular(5)),
                       child: Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.all(5),
+                            padding: const EdgeInsets.all(5),
                             child: TabBar(
                               unselectedLabelColor: Colors.white,
                               labelColor: Colors.white,
                               indicatorColor: Colors.transparent,
                               indicatorWeight: 2,
                               indicator: BoxDecoration(
-                                color: Color(0xff272430),
+                                color: const Color(0xff272430),
                                 borderRadius: BorderRadius.circular(5),
                               ),
                               controller: tabController,
-                              tabs: [
+                              tabs: const [
                                 Tab(
                                   text: '           Schedule                ',
                                 ),
@@ -139,7 +145,7 @@ class _HomeScrean extends State<HomeScrean>
                     Expanded(
                       child: TabBarView(
                         controller: tabController,
-                        children: [
+                        children: const [
                           Tab1(),
                           Tab2(),
                         ],
@@ -151,10 +157,12 @@ class _HomeScrean extends State<HomeScrean>
             ),
           ),
           floatingActionButton: FloatingActionButton(
-              child: Icon(Icons.add),
+              child: const Icon(Icons.add),
               onPressed: () async {
-                final res = await Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AddTaskScreen()));
+                final res = await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const AddTaskScreen()));
 
                 if (res != null) {
                   //3

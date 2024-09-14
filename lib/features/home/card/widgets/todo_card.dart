@@ -17,7 +17,8 @@ class CardTodolist extends StatelessWidget {
       width: 200,
       height: 150,
       decoration: BoxDecoration(
-          color: Color(0xff3C1F7B), borderRadius: BorderRadius.circular(12.0)),
+          color: const Color(0xff3C1F7B),
+          borderRadius: BorderRadius.circular(12.0)),
       child: Padding(
         padding: const EdgeInsets.all(14.0),
         child: Column(
@@ -27,39 +28,39 @@ class CardTodolist extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text(
+                const Text(
                   'Name :   ',
                   style: TextStyle(color: Colors.white),
                 ),
                 Text(
                   title,
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             )
             // Another Row for Description and its desc
             ,
             Row(
               children: [
-                Text(
+                const Text(
                   'Description :   ',
                   style: TextStyle(color: Colors.white),
                 ),
                 Text(
                   desc,
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               children: [
                 IconButton(
                     onPressed: onDelete,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.delete,
                       color: Colors.white,
                     )),

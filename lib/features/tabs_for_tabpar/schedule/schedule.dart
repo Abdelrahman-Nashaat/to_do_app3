@@ -43,16 +43,22 @@ class _Tab1State extends State<Tab1> {
     //text
     //float
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
-              colors: [Color(0xff3A3372), Color(0xff3A3372)])),
+              colors: [
+            Color(0xff2A2A2E),
+            Color(0xff1F1338),
+            Color(0xff0D0817),
+            Color(0xff050309),
+            Color(0xff000000),
+          ])),
       child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             backgroundColor: Colors.transparent,
-            title: Text(
+            title: const Text(
               "Taskes                                             ",
               style: TextStyle(color: Colors.white),
             ),
@@ -66,11 +72,11 @@ class _Tab1State extends State<Tab1> {
                       child: Center(
                         child: Container(
                           decoration: BoxDecoration(
-                              color: Color(0xff3C1F7B),
+                              color: const Color(0xff3C1F7B),
                               borderRadius: BorderRadius.circular(11)),
                           width: 193,
                           height: 36,
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               'You Didn’t Have Any Schedule.',
                               style: TextStyle(
@@ -82,11 +88,11 @@ class _Tab1State extends State<Tab1> {
                         ),
                       ),
                     ),
-                    FilledButton(onPressed: () {}, child: Text("Button"))
+                    FilledButton(onPressed: () {}, child: const Text("Button"))
                   ],
                 )
               : Padding(
-                  padding: EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(16),
                   child: ListView.builder(
                       itemCount: tasks.length,
                       itemBuilder: (context, index) {

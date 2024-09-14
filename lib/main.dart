@@ -15,17 +15,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       darkTheme: ThemeData(
-          textTheme: TextTheme(),
+          textTheme: const TextTheme(),
           inputDecorationTheme:
-              InputDecorationTheme(border: OutlineInputBorder()),
+              const InputDecorationTheme(border: OutlineInputBorder()),
           colorScheme: ColorScheme.fromSeed(
-              seedColor: Color(0xff3C1F7B), brightness: Brightness.dark)),
+              seedColor: const Color(0xff3C1F7B), brightness: Brightness.dark)),
       themeMode: ThemeMode.light,
       theme: ThemeData(
           inputDecorationTheme:
-              InputDecorationTheme(border: OutlineInputBorder()),
-          colorScheme: ColorScheme.fromSeed(seedColor: Color(0xff3C1F7B))),
-      home: HomeScrean(),
+              const InputDecorationTheme(border: OutlineInputBorder()),
+          colorScheme:
+              ColorScheme.fromSeed(seedColor: const Color(0xff3C1F7B))),
+      home: const HomeScrean(),
     );
   }
 }
